@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento prueba</title>
+</head>
+<body class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <a class="navbar-brand text-light" href="#">Menú de Navegación</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="angular.html">Angular</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="fluter.html">Flutter</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="laravel.html">Laravel</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="sql.html">SQL</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="ejerciciosql.html">Ejercicio SQL</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="row">
+        <div class="col-12 mx-auto">
+            <h1 class="mt-4">Ejercicio SQL</h1>
+            <p>
+                Supongamos que tienes tres tablas en una base de datos: clientes, pedidos, y productos. Diseña una consulta SQL que muestre el nombre de los clientes junto con los nombres de los productos que han pedido en los últimos 30 días.
+                Clientes: id_cliente, nombre
+                Productos: id_producto, nombre_producto, precio_unitario
+                Pedidos: id_pedido, id_producto, cantidad, precio_unitario,
+                
+            </p>
+            <h2>Table clientes:</h2>
+            
+            <pre>
+                CREATE TABLE clientes (
+                id_cliente INT AUTO_INCREMENT PRIMARY KEY,
+                nombre VARCHAR(255)
+                );
+            </pre>
+            <h2>Table productos:</h2>
+            
+            <pre>
+                CREATE TABLE productos (
+                id_producto INT AUTO_INCREMENT PRIMARY KEY,
+                nombre_producto VARCHAR(255),
+                precio_unitario DECIMAL(10, 2)
+                );
+            </pre>
+            <h2>Table pedidos:</h2>
+            
+            <pre>
+                CREATE TABLE pedidos (
+                id_pedido INT AUTO_INCREMENT PRIMARY KEY,
+                id_cliente INT,
+                id_producto INT,
+                cantidad INT,
+                fecha_pedido DATE,
+                FOREIGN KEY (id_cliente) REFERENCES clientes(id_cliente),
+                FOREIGN KEY (id_producto) REFERENCES productos(id_producto)
+                );
+            </pre>
+
+            <h2>solución:</h2>
+            
+            <pre>
+                SELECT c.nombre AS NombreCliente, pr.nombre_producto AS NombreProducto
+                FROM clientes c
+                JOIN pedidos pe ON c.id_cliente = pe.id_cliente
+                JOIN productos pr ON pe.id_producto = pr.id_producto
+                WHERE pe.fecha_pedido >= DATE_SUB(CURDATE(), INTERVAL 30 DAY);
+            </pre>
+    
+           
+        </div>
+    </div>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <a class="navbar-brand text-light" href="#">Menú de Navegación</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link text-light" href="angular.html">Angular</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" href="fluter.html">Flutter</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" href="laravel.html">Laravel</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" href="sql.html">SQL</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" href="ejerciciosql.html">Ejercicio SQL</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
