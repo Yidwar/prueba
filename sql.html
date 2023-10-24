@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento prueba</title>
+</head>
+<body class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <a class="navbar-brand text-light" href="#">Menú de Navegación</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="angular.html">Angular</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="fluter.html">Flutter</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="laravel.html">Laravel</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="sql.html">SQL</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="row">
+        <div class="col-12 mx-auto">
+            <h1 class="mt-4">SQL y su Función Principal en el Desarrollo de Bases de Datos</h1>
+            <p class="lead">
+                SQL, o Structured Query Language, es un lenguaje de programación utilizado para gestionar y manipular bases de datos relacionales. Su función principal en el desarrollo de bases de datos es proporcionar una forma estándar y eficaz de realizar las siguientes tareas:
+            </p>
+
+            <h2>1. Creación de Tablas y Esquemas</h2>
+            <p>
+                SQL permite definir la estructura de una base de datos mediante la creación de tablas que contienen columnas con tipos de datos específicos. Esto incluye la definición de claves primarias, claves foráneas y restricciones de integridad para garantizar la coherencia de los datos.
+            </p>
+
+            <h2>2. Inserción de Datos</h2>
+            <p>
+                Puedes utilizar SQL para insertar nuevos registros en las tablas de la base de datos. Esto implica especificar los valores para cada columna en un nuevo registro.
+            </p>
+
+            <h2>3. Consultas y Búsquedas de Datos</h2>
+            <p>
+                SQL es ampliamente conocido por su capacidad para recuperar datos de una base de datos. Puedes realizar consultas que seleccionen, filtren y ordenen los datos según tus necesidades, lo que facilita la obtención de información específica de la base de datos.
+            </p>
+
+            <h2>4. Actualización y Modificación de Datos</h2>
+            <p>
+                SQL permite modificar registros existentes en una base de datos. Puedes actualizar valores en las tablas y realizar operaciones como agregar, eliminar o modificar datos.
+            </p>
+
+            <h2>5. Eliminación de Datos</h2>
+            <p>
+                Puedes utilizar SQL para eliminar registros que ya no sean necesarios en la base de datos. Esto ayuda a mantener la base de datos limpia y organizada.
+            </p>
+
+            <h2>6. Administración de Transacciones</h2>
+            <p>
+                SQL admite transacciones, lo que garantiza la consistencia de los datos en situaciones en las que múltiples operaciones deben realizarse de manera conjunta o no realizarse en absoluto si alguna operación falla.
+            </p>
+
+            <p>
+                En resumen, SQL desempeña un papel fundamental en el desarrollo de bases de datos al permitir la creación, gestión y manipulación de datos de manera estructurada y eficiente. Este lenguaje es esencial para interactuar con bases de datos relacionales en una amplia variedad de aplicaciones y sistemas.
+            </p>
+        </div>
+    </div>
+    <div class="col-12 mx-auto">
+        <h1 class="mt-4">Diferencia entre INNER JOIN y LEFT JOIN en SQL</h1>
+        <p class="lead">
+            En SQL, tanto INNER JOIN como LEFT JOIN son cláusulas utilizadas en consultas para combinar datos de múltiples tablas. Sin embargo, existe una diferencia fundamental en cómo manejan los registros que no tienen coincidencias en las tablas que se están uniendo:
+        </p>
+
+        <h2>INNER JOIN</h2>
+        <p>
+            INNER JOIN, también conocido como JOIN, devuelve solo los registros que tienen coincidencias en ambas tablas que se están uniendo. Los registros que no tienen coincidencias en ambas tablas se excluyen de los resultados. Esta cláusula se utiliza cuando se desean registros que tienen relaciones coincidentes en ambas tablas.
+        </p>
+
+        <h2>LEFT JOIN</h2>
+        <p>
+            LEFT JOIN, también conocido como LEFT OUTER JOIN, devuelve todos los registros de la tabla de la izquierda (tabla principal) y los registros coincidentes de la tabla de la derecha. Si no hay coincidencias en la tabla de la derecha, se rellena con valores NULL. Esto significa que todos los registros de la tabla de la izquierda se incluyen en los resultados, incluso si no tienen coincidencias en la tabla de la derecha. LEFT JOIN se utiliza cuando se desean todos los registros de la tabla de la izquierda y coincidencias de la tabla de la derecha, con valores nulos en caso de no coincidencias.
+        </p>
+
+        <p>
+            En resumen, la diferencia clave entre INNER JOIN y LEFT JOIN radica en la inclusión de registros que no tienen coincidencias. INNER JOIN devuelve solo registros con coincidencias en ambas tablas, mientras que LEFT JOIN incluye todos los registros de la tabla de la izquierda y agrega coincidencias de la tabla de la derecha con valores nulos en caso de no coincidencias.
+        </p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12 mx-auto">
+        <h1 class="mt-4">Normalización de Bases de Datos</h1>
+        <p class="lead">
+            La normalización de bases de datos es un proceso esencial en el diseño de bases de datos relacionales. Consiste en organizar la estructura de una base de datos de manera eficiente y sin redundancias innecesarias. Este proceso es importante por varias razones:
+        </p>
+
+        <h2>Reducción de la Redundancia de Datos</h2>
+        <p>
+            La normalización elimina la duplicación innecesaria de datos, lo que ahorra espacio de almacenamiento y evita inconsistencias en la información. Los datos se almacenan solo una vez y se hacen referencias cruzadas a través de relaciones, lo que mejora la integridad de los datos.
+        </p>
+
+        <h2>Mejora del Rendimiento</h2>
+        <p>
+            Una base de datos normalizada permite consultas más eficientes al dividir los datos en tablas más pequeñas y relacionadas. Esto acelera las operaciones de búsqueda y recuperación de datos, lo que mejora el rendimiento de las aplicaciones.
+        </p>
+
+        <h2>Mantenibilidad y Escalabilidad</h2>
+        <p>
+            Las bases de datos normalizadas son más fáciles de mantener y extender. Cuando se necesita realizar modificaciones en la estructura de la base de datos, las alteraciones se propagan de manera más sencilla a través de relaciones bien definidas.
+        </p>
+
+        <h2>Integridad de Datos</h2>
+        <p>
+            La normalización promueve la integridad de los datos al evitar inconsistencias y redundancias. Esto garantiza que los datos sean precisos y confiables, lo que es fundamental en aplicaciones críticas.
+        </p>
+
+        <h2>Flexibilidad y Adaptabilidad</h2>
+        <p>
+            Una base de datos normalizada es más flexible y adaptable a los cambios en los requisitos del sistema. Permite agregar, modificar o eliminar datos y relaciones de manera más sencilla sin afectar negativamente otras partes del sistema.
+        </p>
+
+        <p>
+            En resumen, la normalización de bases de datos es importante para reducir la redundancia, mejorar el rendimiento, mantener la integridad de los datos y facilitar la escalabilidad y adaptabilidad de las bases de datos. Es un paso esencial en el diseño de sistemas de gestión de bases de datos eficientes y confiables.
+        </p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12 mx-auto">
+        <h1 class="mt-4">Transacciones en SQL</h1>
+        <p class="lead">
+            Las transacciones son un concepto fundamental en las bases de datos relacionales y se utilizan para garantizar la consistencia y la integridad de los datos. Su propósito principal es asegurar que una serie de operaciones en una base de datos se ejecuten de manera exitosa o se reviertan por completo si alguna operación falla. A continuación, se explican las transacciones y su propósito:
+        </p>
+
+        <h2>¿Qué es una Transacción?</h2>
+        <p>
+            Una transacción en SQL es un conjunto de operaciones que se ejecutan como una sola unidad atómica. Esto significa que todas las operaciones dentro de una transacción se consideran exitosas si se completan con éxito o fallan si alguna de ellas falla. No hay un estado intermedio: una transacción se ejecuta por completo o se deshace por completo.
+        </p>
+
+        <h2>Propósito de las Transacciones:</h2>
+        <p>
+            1. **Mantener la Integridad de los Datos:** Las transacciones garantizan que los datos en la base de datos mantengan su integridad, evitando situaciones donde solo algunas partes de una operación se completan y otras no, lo que podría dejar la base de datos en un estado inconsistente.
+        </p>
+        <p>
+            2. **Gestionar Errores:** Si una operación dentro de una transacción falla (por ejemplo, debido a un error de escritura o violación de una restricción), la transacción se revierte por completo, asegurando que la base de datos no quede en un estado incorrecto.
+        </p>
+        <p>
+            3. **Consistencia:** Las transacciones garantizan la consistencia de los datos, lo que significa que los cambios en la base de datos se aplican en un momento específico, evitando problemas de concurrencia.
+        </p>
+        <p>
+            4. **Aislamiento:** Las transacciones proporcionan un nivel de aislamiento entre diferentes transacciones en ejecución, evitando conflictos y problemas de concurrencia.
+        </p>
+
+        <p>
+            En resumen, las transacciones en SQL tienen como propósito principal garantizar la integridad, consistencia y confiabilidad de los datos en una base de datos. Ayudan a gestionar errores, evitan cambios parciales y proporcionan un entorno aislado para las operaciones en una base de datos.
+        </p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12 mx-auto">
+        <h1 class="mt-4">Diferencia entre GROUP BY y HAVING en SQL</h1>
+        <p class="lead">
+            En SQL, tanto GROUP BY como HAVING se utilizan para realizar operaciones de agregación en conjuntos de datos. Sin embargo, tienen propósitos diferentes y se aplican en momentos diferentes dentro de una consulta. Aquí se explica la diferencia entre GROUP BY y HAVING:
+        </p>
+
+        <h2>GROUP BY</h2>
+        <p>
+            GROUP BY se utiliza para agrupar filas de una tabla basadas en el valor de una o más columnas. Cuando se aplica GROUP BY, se crean grupos de filas que comparten el mismo valor en la columna especificada. Luego, se pueden aplicar funciones de agregación (como SUM, COUNT, AVG, etc.) a cada grupo por separado.
+        </p>
+
+        <h2>HAVING</h2>
+        <p>
+            HAVING se utiliza para filtrar los resultados de una consulta después de aplicar GROUP BY y funciones de agregación. Permite establecer condiciones en los resultados agregados. Por ejemplo, puedes usar HAVING para filtrar grupos que cumplan ciertas condiciones, como grupos con un total mayor que cierto valor.
+        </p>
+
+        <h2>Ejemplo de Uso:</h2>
+        <p>
+            Supongamos que tenemos una tabla de ventas con información sobre productos y cantidades vendidas. Si queremos encontrar los productos cuya cantidad total vendida es mayor que 100, podríamos hacer lo siguiente:
+        </p>
+        <pre>
+            SELECT producto, SUM(cantidad) as total_vendido
+            FROM ventas
+            GROUP BY producto
+            HAVING total_vendido > 100;
+        </pre>
+
+        <p>
+            En este ejemplo, primero agrupamos las filas por producto utilizando GROUP BY y luego aplicamos HAVING para filtrar los resultados basados en el total_vendido.
+        </p>
+
+        <p>
+            En resumen, GROUP BY se usa para agrupar filas en conjuntos basados en el valor de una o más columnas, mientras que HAVING se utiliza para filtrar los resultados agregados basados en condiciones específicas.
+        </p>
+    </div>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <a class="navbar-brand text-light" href="#">Menú de Navegación</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link text-light" href="angular.html">Angular</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" href="fluter.html">Flutter</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" href="laravel.html">Laravel</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" href="sql.html">SQL</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

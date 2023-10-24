@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento prueba</title>
+</head>
+<body class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <a class="navbar-brand text-light" href="#">Menú de Navegación</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="angular.html">Angular</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="fluter.html">Flutter</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="laravel.html">Laravel</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="sql.html">SQL</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="row">
+        <div class="col-12 mx-auto">
+            <h1 class="mt-4">¿Qué es Laravel y cuáles son sus principales características?</h1>
+            
+            <p class="lead">
+                Laravel es un framework de PHP para ayudarnos en un tipo de desarrollo sobre aplicaciones escritas en este lenguaje de programación. Esté framework o más bien podría llamarlo compañero de ahora en adelante, nos ayuda en muchas cosas al desarrollar una aplicación, por medio de sus sistema de paquetes y de ser un framework del tipo MVC (Modelo-Vista-Controlador) da como resultado que podamos “despreocuparnos” (por así decirlo) en ciertas aspecto del desarrollo, cómo instanciar clases y métodos para usarlos en muchas partes de nuestra aplicación sin la necesidad de escribirlo y repetirlos muchas veces con lo que eso conlleva a la hora de modificar algo en el código.
+
+                Funciona como muchos otros ya, desde la línea de comandos con el famoso Artisan que es el nombre que le dan a esta interfaz por comandos para ejecutar muchas funcionalidades como ver todas las rutas de la aplicación disponible, o poner a correr la aplicación o pararla. Es tan potente y sencillo de usar que una vez que lo has probado en alguna aplicación te puedes “malacostumbrar” y echarlo de menos cuando haces otra aplicación con otro framework que no cuenta con él.
+            </p>
+
+            <p>1. Arquitectura MVC (Modelo-Vista-Controlador): Laravel sigue una arquitectura MVC que separa la lógica de la aplicación en tres componentes principales: Modelo, Vista y Controlador. Esto promueve una estructura organizada y modular para el desarrollo de aplicaciones web.</p>
+            
+            <p>2. Sintaxis Elegante: Laravel utiliza una sintaxis clara y elegante que facilita la escritura de código limpio y legible. Esto mejora la productividad del desarrollador y reduce la posibilidad de errores.</p>
+            
+            <p>3. Blade, el motor de plantillas: Blade es el motor de plantillas integrado en Laravel que permite definir y mostrar las vistas de manera sencilla y eficiente. Proporciona características como herencia de plantillas, secciones, directivas y más.</p>
+            
+            <p>4. Eloquent ORM: Laravel incluye un ORM (Mapeo Objeto-Relacional) llamado Eloquent, que simplifica la interacción con la base de datos mediante el uso de modelos y relaciones en lugar de consultas SQL directas. Esto facilita la gestión de la base de datos y aumenta la seguridad.</p>
+            
+            <p>5. Autenticación y Autorización: Laravel proporciona un sistema de autenticación y autorización completo, lo que permite gestionar usuarios, roles y permisos de manera eficiente. Incluso incluye características de autenticación de dos factores.</p>
+            
+            <p>6. Migraciones y Semillas: Las migraciones permiten definir la estructura de la base de datos como código, lo que facilita la gestión de las bases de datos y su versionado. Las semillas permiten poblar la base de datos con datos de prueba.</p>
+            
+            <p>7. Sistema de Enrutamiento: Laravel ofrece un sistema de enrutamiento limpio y eficiente que permite definir rutas y controladores de manera clara y organizada.</p>
+            
+            <p>8. Soporte para Mensajes y Notificaciones: Laravel proporciona funciones para enviar mensajes de correo electrónico, notificaciones por SMS y notificaciones en tiempo real a través de Laravel Echo.</p>
+            
+            <p>9. Herramientas de Pruebas Integradas: Laravel incluye un conjunto de herramientas de pruebas que facilitan la escritura y ejecución de pruebas unitarias y de integración para garantizar la calidad del código.</p>
+            
+            <p>10. APIs y Aplicaciones Móviles: Laravel facilita la creación de APIs para aplicaciones móviles y proporciona autenticación de API, autenticación de Passport y herramientas para la creación de aplicaciones móviles.</p>
+            
+            <p>11. Programación en Colas: Laravel admite la programación en colas para tareas en segundo plano, lo que es útil para tareas que requieren tiempo de ejecución, como procesar imágenes o enviar correos electrónicos.</p>
+            
+            <p>12. Facilidad de Despliegue: Laravel es compatible con varias plataformas de hospedaje y servicios en la nube, lo que facilita el despliegue de aplicaciones web en entornos de producción.</p>
+            
+            <p>13. Comunidad Activa: Laravel tiene una gran y activa comunidad de desarrolladores, lo que significa que hay una gran cantidad de recursos, tutoriales y paquetes de terceros disponibles para extender su funcionalidad.</p>
+
+            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 mx-auto">
+            <h1 class="mt-4">Diferencia entre Eloquent ORM y el Query Builder en Laravel.</h1>
+            <p class="lead">
+                La diferencia principal entre Eloquent ORM y el Query Builder en Laravel radica en cómo interactúan con la base de datos:
+            </p>
+            <h2>Eloquent ORM (Object-Relational Mapping):</h2>
+            <ul>
+                <li>Eloquent ORM es un sistema de mapeo objeto-relacional que permite interactuar con la base de datos utilizando objetos y modelos en lugar de escribir consultas SQL directas.</li>
+                <li>Utiliza modelos para representar tablas de la base de datos, lo que facilita la manipulación de registros y relaciones.</li>
+                <li>Proporciona métodos y relaciones que simplifican la consulta y manipulación de datos de la base de datos.</li>
+                <li>Facilita la gestión de registros y relaciones complejas a través de una sintaxis orientada a objetos.</li>
+            </ul>
+            <h2>Query Builder:</h2>
+            <ul>
+                <li>El Query Builder es una interfaz orientada a consultas que permite construir consultas SQL utilizando métodos encadenados en lugar de escribir consultas SQL directas.</li>
+                <li>Proporciona una forma más programática de construir y personalizar consultas SQL sin necesidad de escribir sentencias SQL completas.</li>
+                <li>Es especialmente útil cuando se necesitan consultas personalizadas y complejas que no se pueden lograr fácilmente con Eloquent ORM.</li>
+                <li>No utiliza modelos ni objetos para representar tablas, lo que lo hace más adecuado para consultas ad hoc.</li>
+            </ul>
+            <p>En resumen, Eloquent ORM es ideal cuando trabajas con modelos de datos y deseas aprovechar las ventajas de la programación orientada a objetos, mientras que el Query Builder es útil para construir consultas SQL personalizadas de manera más flexible. Ambos enfoques son parte de la caja de herramientas de Laravel y se pueden utilizar según las necesidades específicas de tu proyecto.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 mx-auto">
+            <h1 class="mt-4">¿Qué es la Inyección de Dependencias y cómo se implementa en Laravel?</h1>
+            <p class="lead">
+                La inyección de dependencias es un patrón de diseño en programación que se utiliza para mejorar la modularidad y la flexibilidad de una aplicación al permitir que los objetos dependientes se suministren desde el exterior en lugar de crearlos internamente.
+            </p>
+
+            <p>
+                En Laravel, la inyección de dependencias se implementa en el contenedor de servicios para administrar las dependencias de las clases y facilitar la inversión de control.
+            </p>
+
+            <p>
+                La implementación de la inyección de dependencias en Laravel implica:
+            </p>
+
+            <p>
+                1. Definir interfaces y clases concretas: Debes crear interfaces que describan las dependencias necesarias y las clases concretas que las implementan.
+            </p>
+
+            <p>
+                2. Registrar dependencias: En el contenedor de servicios de Laravel, registra las implementaciones concretas de las interfaces para que Laravel las pueda resolver automáticamente.
+            </p>
+
+            <p>
+                3. Inyectar dependencias: En tus clases, utiliza la inyección de dependencias en el constructor o en métodos específicos para recibir automáticamente las dependencias necesarias.
+            </p>
+
+            <p>
+                4. Utilizar dependencias: Ahora puedes utilizar las dependencias en tu código de manera segura y sin necesidad de crear manualmente las instancias.
+            </p>
+
+            <p>
+                La inyección de dependencias en Laravel promueve un código limpio, mantenible y flexible al permitirte cambiar fácilmente las implementaciones de las dependencias sin afectar el resto de la aplicación. Esto es especialmente útil para realizar pruebas unitarias y para lograr una mayor cohesión y menor acoplamiento en tu código.
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 mx-auto">
+            <h1 class="mt-4">¿Cuál es el propósito de los Middleware en una aplicación Laravel?</h1>
+            <p class="lead">
+                Los Middleware son una parte esencial en el flujo de solicitudes y respuestas en una aplicación Laravel. Su propósito principal es proporcionar un mecanismo flexible y poderoso para filtrar, analizar y modificar las solicitudes HTTP antes de que lleguen a las rutas o controladores, así como para manipular las respuestas antes de que se envíen al cliente.
+            </p>
+
+            <p>
+                Algunos de los propósitos clave de los Middleware en Laravel incluyen:
+            </p>
+
+            <p>
+                1. Autenticación y Autorización: Los Middleware pueden verificar la autenticación del usuario y autorizar el acceso a rutas y recursos específicos. Esto garantiza que solo los usuarios autorizados puedan acceder a ciertas partes de la aplicación.
+            </p>
+
+            <p>
+                2. Validación de Datos: Pueden validar y filtrar los datos enviados en las solicitudes, asegurando que cumplan con los criterios definidos antes de procesarlos en el controlador. Esto ayuda a mantener la integridad de los datos.
+            </p>
+
+            <p>
+                3. Registro y Auditoría: Los Middleware pueden registrar información sobre las solicitudes y respuestas, lo que es útil para llevar un registro de actividad y auditoría de la aplicación.
+            </p>
+
+            <p>
+                4. Manipulación de Sesiones y Cookies: Permiten administrar sesiones y cookies, lo que es fundamental para la gestión de la información del usuario durante su visita a la aplicación.
+            </p>
+
+            <p>
+                5. Caché y Compresión: Pueden aplicar caché a respuestas para mejorar el rendimiento y comprimir datos para ahorrar ancho de banda.
+            </p>
+
+            <p>
+                En resumen, los Middleware en Laravel son una herramienta versátil que desempeña un papel fundamental en la seguridad, la integridad de datos, el rendimiento y la funcionalidad de una aplicación. Permiten aplicar lógica específica a nivel de solicitud y respuesta, lo que mejora la eficiencia y la robustez de la aplicación.
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 mx-auto">
+            <h1 class="mt-4">¿Qué es la autenticación de Passport en Laravel y cuándo podría ser útil?</h1>
+            <p class="lead">
+                La autenticación de Passport en Laravel es un paquete que simplifica la implementación de autenticación de API en aplicaciones web y móviles. Passport proporciona una forma segura y conveniente de autenticar a usuarios y emitir tokens de acceso, lo que es esencial en aplicaciones que requieren interacciones seguras a través de una API.
+            </p>
+
+            <p>
+                Passport se convierte en una herramienta valiosa en las siguientes situaciones:
+            </p>
+
+            <p>
+                1. <strong>Desarrollo de Aplicaciones Móviles:</strong> Cuando estás creando una aplicación móvil que necesita autenticar usuarios a través de una API, Passport simplifica el proceso de autenticación y emisión de tokens de acceso.
+            </p>
+
+            <p>
+                2. <strong>Autenticación de API:</strong> Passport es ideal para implementar autenticación en servicios web y API, lo que garantiza que solo usuarios autorizados puedan acceder a los recursos protegidos por la API.
+            </p>
+
+            <p>
+                3. <strong>Aplicaciones de Terceros:</strong> Si deseas permitir que otras aplicaciones de terceros se autentiquen en tu servicio, Passport facilita la autenticación y la emisión de tokens para estas aplicaciones.
+            </p>
+
+            <p>
+                4. <strong>Seguridad y Escalabilidad:</strong> Passport se integra de manera segura con Laravel y proporciona características como la autenticación de dos factores y la revocación de tokens. Esto es fundamental para la seguridad de tu aplicación.
+            </p>
+
+            <p>
+                5. <strong>Facilidad de Implementación:</strong> Laravel Passport se integra perfectamente con Laravel, lo que facilita su implementación y uso en aplicaciones existentes o nuevas.
+            </p>
+
+            <p>
+                En resumen, la autenticación de Passport en Laravel es especialmente útil en escenarios donde se requiere la autenticación de usuarios a través de una API, ya sea para aplicaciones móviles, servicios web, aplicaciones de terceros o cualquier situación que involucre interacciones seguras con una API.
+            </p>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <a class="navbar-brand text-light" href="#">Menú de Navegación</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="angular.html">Angular</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="fluter.html">Flutter</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="laravel.html">Laravel</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="sql.html">SQL</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

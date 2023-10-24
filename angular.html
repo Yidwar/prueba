@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento prueba</title>
+</head>
+<body class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <a class="navbar-brand text-light" href="#">Menú de Navegación</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="angular.html">Angular</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="fluter.html">Flutter</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="laravel.html">Laravel</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="sql.html">SQL</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="row">
+        <div class="col-12 mx-auto">
+            <h1 class="mt-4">Angular y sus Componentes Clave</h1>
+            <p class="lead">
+                Angular es un framework de desarrollo de aplicaciones web y móviles desarrollado por Google. A continuación, se describen los componentes clave de Angular y su funcionalidad:
+            </p>
+
+            <h2>Componentes Clave de Angular</h2>
+            <ol>
+                <li><strong>Módulos:</strong> Los módulos son contenedores que agrupan componentes, servicios y otros elementos relacionados. Ayudan a organizar y dividir la aplicación en partes más pequeñas y coherentes.</li>
+                <li><strong>Componentes:</strong> Los componentes son la unidad básica de construcción de una aplicación Angular. Representan elementos de la interfaz de usuario y contienen lógica para manejar eventos y datos.</li>
+                <li><strong>Directivas:</strong> Las directivas son instrucciones en el marcado HTML que extienden la funcionalidad de los elementos. Angular proporciona directivas como ngFor, ngIf y ngSwitch para manipular el DOM de manera dinámica.</li>
+                <li><strong>Servicios:</strong> Los servicios son clases que contienen lógica reutilizable, como llamadas a API, manejo de datos y lógica de negocios. Se inyectan en componentes y otros servicios a través del sistema de inyección de dependencias.</li>
+                <li><strong>Enrutamiento:</strong> El enrutamiento en Angular permite la navegación entre vistas y la gestión de URL. El módulo RouterModule y las rutas se utilizan para definir la navegación en la aplicación.</li>
+                <li><strong>Formularios:</strong> Angular ofrece formularios reactivos y formularios basados en plantillas para manejar la entrada de datos y validar formularios de manera eficiente.</li>
+                <li><strong>HTTP Client:</strong> El módulo HttpClient se utiliza para realizar solicitudes HTTP a servicios web y API. Facilita la comunicación con servidores para recuperar y enviar datos.</li>
+                <li><strong>Observables:</strong> Los observables son una parte fundamental de Angular y se utilizan para manejar flujos de datos asincrónicos. Son especialmente útiles al trabajar con solicitudes HTTP y eventos del usuario.</li>
+                <li><strong>Inyección de Dependencias:</strong> Angular utiliza un sistema de inyección de dependencias que facilita la gestión de las dependencias de los componentes y servicios, promoviendo la reutilización y la modularidad del código.</li>
+            </ol>
+
+            <p>
+                Estos componentes clave hacen que Angular sea un framework poderoso y versátil para el desarrollo de aplicaciones web y móviles. Permiten una estructura organizada y modular, facilitando la creación de aplicaciones complejas y de alto rendimiento.
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 mx-auto">
+            <h1 class="mt-4">Diferencia entre ngOnChanges y ngOnInit en Angular</h1>
+            <p class="lead">
+                En Angular, `ngOnChanges` y `ngOnInit` son dos métodos que se utilizan en los componentes para gestionar el ciclo de vida de un componente y realizar acciones específicas. A continuación, se explica la diferencia entre ambos:
+            </p>
+
+            <h2>ngOnInit</h2>
+            <p>
+                El método `ngOnInit` se llama una vez después de que el componente y sus datos vinculados se inicializan. Es comúnmente utilizado para realizar tareas de inicialización, como la recuperación de datos iniciales, la configuración de propiedades y la preparación del componente para su uso. En resumen, se ejecuta una vez al inicio del ciclo de vida del componente.
+            </p>
+
+            <h2>ngOnChanges</h2>
+            <p>
+                Por otro lado, el método `ngOnChanges` se llama cada vez que se detecta un cambio en las propiedades de entrada (`@Input`) del componente. Permite reaccionar a cambios en los datos de entrada y realizar acciones específicas en respuesta a estos cambios. Este método se ejecuta varias veces a lo largo del ciclo de vida del componente cuando se producen cambios en las propiedades de entrada.
+            </p>
+
+            <p>
+                En resumen, la principal diferencia es que `ngOnInit` se ejecuta una vez al inicio, mientras que `ngOnChanges` se ejecuta múltiples veces en respuesta a cambios en las propiedades de entrada. Ambos métodos son útiles en diferentes situaciones y se utilizan para diferentes propósitos en el desarrollo de componentes Angular.
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 mx-auto">
+            <h1 class="mt-4">Concepto de "binding" en Angular</h1>
+            <p class="lead">
+                En Angular, el "binding" se refiere a la forma en que los datos fluyen entre el componente y la vista, permitiendo que los cambios en uno se reflejen en el otro. El "binding" es fundamental para la creación de aplicaciones dinámicas y reactivas. Hay varios tipos de "binding" disponibles en Angular, que incluyen:
+            </p>
+
+            <h2>1. Interpolación ({{ }})</h2>
+            <p>
+                La interpolación permite mostrar valores de variables del componente en la vista. Se utiliza mediante expresiones del tipo `{{ variable }}`, donde `variable` es una propiedad del componente. Los valores de las variables se insertan dinámicamente en la vista.
+            </p>
+
+            <h2>2. Property Binding ([])</h2>
+            <p>
+                El "Property Binding" se utiliza para asignar valores a propiedades de elementos HTML. Permite establecer dinámicamente el valor de atributos HTML, como `src`, `href`, `disabled`, etc., basándose en las propiedades del componente.
+            </p>
+
+            <h2>3. Event Binding ()</h2>
+            <p>
+                El "Event Binding" permite capturar eventos del usuario, como clics, cambios de entrada, etc., y reaccionar a ellos en el componente. Se utiliza mediante expresiones del tipo `(evento)="manipuladorEvento()"`, donde `evento` es el evento HTML y `manipuladorEvento` es una función del componente.
+            </p>
+
+            <h2>4. Two-Way Binding ([()])</h2>
+            <p>
+                El "Two-Way Binding" combina la propiedad y el "Event Binding" para lograr una sincronización bidireccional entre una propiedad del componente y un elemento de la vista. Se utiliza mediante la notación `[(ngModel)]` y se utiliza comúnmente en elementos de formulario.
+            </p>
+
+            <p>
+                Estos son algunos de los principales tipos de "binding" disponibles en Angular. Cada tipo tiene su propio propósito y se utiliza en diferentes situaciones para crear aplicaciones dinámicas y reactivas.
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 mx-auto">
+            <h1 class="mt-4">Servicios en Angular</h1>
+            <p class="lead">
+                Los servicios en Angular son clases que proporcionan funcionalidad compartida y datos a lo largo de la aplicación. Los servicios son una parte fundamental de la arquitectura de Angular y se utilizan para mantener la lógica de la aplicación independiente de los componentes. Aquí hay una descripción de lo que son los servicios y cómo se comunican con los componentes:
+            </p>
+
+            <h2>¿Qué son los servicios en Angular?</h2>
+            <p>
+                Los servicios son clases que se utilizan para llevar a cabo tareas específicas o proporcionar datos en una aplicación Angular. Pueden contener métodos y propiedades que realizan diversas funciones, como llamadas a API, manipulación de datos, autenticación, etc.
+            </p>
+
+            <h2>Comunicación con componentes</h2>
+            <p>
+                Los componentes en Angular pueden comunicarse con los servicios para acceder a funcionalidades compartidas o datos. Esta comunicación se logra mediante la inyección de dependencias. Los componentes solicitan un servicio específico y Angular se encarga de proporcionar una instancia del servicio al componente que lo necesita.
+            </p>
+
+            <h2>Beneficios de los servicios</h2>
+            <p>
+                Los servicios permiten centralizar la lógica de la aplicación, lo que mejora la modularidad y el mantenimiento. También facilitan la reutilización de código, ya que varios componentes pueden acceder al mismo servicio. Además, los servicios son ideales para realizar operaciones asincrónicas, como solicitudes HTTP, y gestionar el estado de la aplicación.
+            </p>
+
+            <p>
+                En resumen, los servicios en Angular son clases que proporcionan funcionalidad compartida y datos a lo largo de la aplicación. Se utilizan para centralizar la lógica de la aplicación y permiten a los componentes acceder a estas funcionalidades mediante la inyección de dependencias.
+            </p>
+        </div>
+    </div>
+    <div class="col-12 mx-auto">
+        <h1 class="mt-4">Ventajas de Lazy Loading en una Aplicación Angular</h1>
+        <p class="lead">
+            Lazy Loading es una técnica utilizada en Angular para cargar módulos de manera diferida, es decir, cuando se necesitan. Esta estrategia conlleva varias ventajas en el desarrollo de aplicaciones web. A continuación, se describen las ventajas de Lazy Loading y cuándo deberías considerar su uso:
+        </p>
+
+        <h2>¿Qué es Lazy Loading?</h2>
+        <p>
+            Lazy Loading implica cargar módulos de manera asincrónica, solo cuando el usuario navega a una sección específica de la aplicación que los requiere. Esto ayuda a reducir el tiempo de carga inicial y acelera la velocidad de la aplicación.
+        </p>
+
+        <h2>Ventajas de Lazy Loading</h2>
+        <p>
+            1. **Mejora el rendimiento**: Al cargar solo los módulos necesarios, la aplicación se inicia más rápido y consume menos recursos, lo que mejora la experiencia del usuario.
+        </p>
+        <p>
+            2. **Reduce el tiempo de carga inicial**: La carga diferida de módulos disminuye significativamente el tiempo que los usuarios deben esperar antes de interactuar con la aplicación.
+        </p>
+        <p>
+            3. **Ahorra ancho de banda**: Lazy Loading permite cargar solo lo que se necesita, lo que reduce la cantidad de datos transmitidos y ahorra ancho de banda.
+        </p>
+        <p>
+            4. **Optimiza el rendimiento en dispositivos móviles**: En dispositivos móviles con conexiones más lentas, Lazy Loading es especialmente beneficioso, ya que reduce la carga inicial.
+        </p>
+
+        <h2>¿Cuándo utilizar Lazy Loading?</h2>
+        <p>
+            Deberías considerar el uso de Lazy Loading en los siguientes casos:
+        </p>
+        <p>
+            1. **Aplicaciones grandes**: En aplicaciones con múltiples módulos y muchas funcionalidades, Lazy Loading puede marcar la diferencia en el rendimiento.
+        </p>
+        <p>
+            2. **Secciones de acceso infrecuente**: Si tienes secciones de la aplicación que los usuarios no acceden con frecuencia, como páginas de administración o configuración, Lazy Loading puede ayudar a reducir la carga inicial.
+        </p>
+        <p>
+            3. **Aplicaciones móviles y de baja velocidad de conexión**: En aplicaciones destinadas a dispositivos móviles o áreas con conexiones de baja velocidad, Lazy Loading es esencial para proporcionar una experiencia fluida.
+        </p>
+
+        <p>
+            En resumen, Lazy Loading en Angular es una técnica que mejora el rendimiento de la aplicación al cargar módulos de manera diferida. Se recomienda su uso en aplicaciones grandes y en secciones de acceso infrecuente, así como en aplicaciones móviles o con conexiones lentas.
+        </p>
+    </div>
+</div>
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <a class="navbar-brand text-light" href="#">Menú de Navegación</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link text-light" href="angular.html">Angular</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" href="fluter.html">Flutter</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" href="laravel.html">Laravel</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" href="sql.html">SQL</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
